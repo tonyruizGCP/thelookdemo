@@ -17,10 +17,10 @@ view: order_items {
   }
 
   # Define your dimensions and measures here, like this:
-  dimension: sales_price {
+  dimension: sale_price {
     description: "Unique ID for each user that has ordered"
     type: number
-    sql: ${TABLE}.sales_price ;;
+    sql: ${TABLE}.sale_price ;;
   }
 
   # Define your dimensions and measures here, like this:
@@ -45,7 +45,7 @@ view: order_items {
   measure: total_sales {
     description: "Use this for counting lifetime orders across many users"
     type: sum
-    sql: ${sales_price} ;;
+    sql: ${sale_price} ;;
   }
 }
 
