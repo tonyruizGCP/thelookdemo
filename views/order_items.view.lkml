@@ -16,6 +16,19 @@ view: order_items {
     sql: ${TABLE}.inventory_id ;;
   }
 
+  # Define your dimensions and measures here, like this:
+  dimension: sales_price {
+    description: "Unique ID for each user that has ordered"
+    type: number
+    sql: ${TABLE}.sales_price ;;
+  }
+
+  # Define your dimensions and measures here, like this:
+  dimension: returned_at {
+    description: "Unique ID for each user that has ordered"
+    type: date_time
+    sql: ${TABLE}.returned_at ;;
+  }
   # dimension: lifetime_orders {
   #   description: "The total number of orders for each user"
   #   type: number
