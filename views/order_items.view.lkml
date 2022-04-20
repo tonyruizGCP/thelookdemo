@@ -42,11 +42,11 @@ view: order_items {
   #   sql: ${TABLE}.most_recent_purchase_at ;;
   # }
 
-  # measure: total_lifetime_orders {
-  #   description: "Use this for counting lifetime orders across many users"
-  #   type: sum
-  #   sql: ${lifetime_orders} ;;
-  # }
+  measure: total_sales {
+    description: "Use this for counting lifetime orders across many users"
+    type: sum
+    sql: ${sales_price} ;;
+  }
 }
 
 # view: order_items {

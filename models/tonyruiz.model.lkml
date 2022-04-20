@@ -16,7 +16,7 @@ explore: order_items {
   join: orders {
     type:left_outer
     relationship: many_to_one
-    sql_on: ${orders.id} = ${order_items.order_id} ;;
+    sql_on: ${orders.order_id} = ${order_items.order_id} ;;
 
   }
 

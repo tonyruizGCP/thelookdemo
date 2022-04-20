@@ -3,7 +3,7 @@ view: orders {
   sql_table_name:  looker-private-demo.thelook.orders ;;
 
   # Define your dimensions and measures here, like this:
-  dimension: id {
+  dimension: order_id {
     description: "Unique ID for each user that has ordered"
     type: number
     sql: ${TABLE}.id ;;
