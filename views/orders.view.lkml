@@ -6,7 +6,7 @@ view: orders {
   dimension: order_id {
     description: "Unique ID for each user that has ordered"
     type: number
-    sql: ${TABLE}.id ;;
+    sql: ${TABLE}.order_id ;;
   }
 
   # Define your dimensions and measures here, like this:
