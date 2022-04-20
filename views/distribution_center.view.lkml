@@ -1,44 +1,35 @@
-view: inventory_items {
-  # You can specify the table name if it's different from the view name:
-  sql_table_name:  looker-private-demo.thelook.inventory_items ;;
+view: distribution_center {
 
-  # Define your dimensions and measures here, like this:
+
+  # # You can specify the table name if it's different from the view name:
+  # sql_table_name: my_schema_name.tester ;;
+  #
+  # # Define your dimensions and measures here, like this:
   dimension: id {
     description: "Unique ID for each user that has ordered"
     type: number
     sql: ${TABLE}.id ;;
   }
 
-  dimension: product_id {
+  dimension: latitude {
     description: "Unique ID for each user that has ordered"
     type: number
-    sql: ${TABLE}.product_id ;;
-  }
-
-  dimension: created_at{
-    description: "Unique ID for each user that has ordered"
-    type: date_time
-    sql: ${TABLE}.created_at ;;
+    sql: ${TABLE}.latitude ;;
   }
 
 
-  dimension: sold_at {
+  dimension: long {
     description: "Unique ID for each user that has ordered"
     type: number
-    sql: ${TABLE}.sold_at ;;
+    sql: ${TABLE}.longitude ;;
   }
 
-  dimension: cost {
+  dimension: name {
     description: "Unique ID for each user that has ordered"
-    type: number
-    sql: ${TABLE}.cost ;;
+    type: string
+    sql: ${TABLE}.name ;;
   }
 
-  dimension: production_distribution_center_id {
-    description: "Unique ID for each user that has ordered"
-    type: number
-    sql: ${TABLE}.production_distribution_center_id ;;
-  }
   # dimension: lifetime_orders {
   #   description: "The total number of orders for each user"
   #   type: number
@@ -59,7 +50,7 @@ view: inventory_items {
   # }
 }
 
-# view: inventory_items {
+# view: distribution {
 #   # Or, you could make this view a derived table, like this:
 #   derived_table: {
 #     sql: SELECT

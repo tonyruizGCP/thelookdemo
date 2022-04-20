@@ -39,3 +39,24 @@ explore: order_items {
     sql_on: ${products.id} = ${inventory_items.product_id} ;;
   }
 }
+
+
+explore: distribution_center {
+
+  join: inventory_items {
+    type:left_outer
+    relationship: many_to_one
+    sql_on: ${inventory_items.production_distribution_center_id} = ${distribution_center.id} ;;
+  }
+
+}
+
+
+explore: events {
+  join: users {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${users.id} = ${events.user_id} ;;
+
+  }
+}
